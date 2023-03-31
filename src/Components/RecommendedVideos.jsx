@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getAllFeeds } from "../utils/fetchData";
-import Spinner from "../Components/Spinner";
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+// import React, { useEffect, useState } from "react";
+// import { getAllFeeds } from "../utils/fetchData";
+// import Spinner from "../Components/Spinner";
+import { SimpleGrid } from "@chakra-ui/react";
 import { VideoPin } from ".";
 
 const RecommendedVideos = ({ feeds }) => {

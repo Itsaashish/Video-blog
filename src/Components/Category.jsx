@@ -9,7 +9,7 @@ import {
   import { Link } from "react-router-dom";
   
   const Category = ({ data }) => {
-    const { colorMode } = useColorMode();
+    // const { colorMode } = useColorMode();
     const bg = useColorModeValue("gray.600", "gray.300");
   
     return (

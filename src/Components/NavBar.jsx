@@ -112,7 +112,7 @@ const NavBar = ({ user, setsearchTerm, searchTerm }) => {
       p={4}
     >
       <Link to={"/"}>
-        <Image src={colorMode == "light" ? logo : logo_dark} width={"180px"} />
+        <Image src={colorMode === "light" ? logo : logo_dark} width={"180px"} />
       </Link>
 
       <InputGroup mx={6} width="60vw">
@@ -142,7 +142,7 @@ const NavBar = ({ user, setsearchTerm, searchTerm }) => {
           borderRadius="5px"
           onClick={toggleColorMode}
         >
-          {colorMode == "light" ? (
+          {colorMode === "light" ? (
             <IoMoon fontSize={25} />
           ) : (
             <IoSunny fontSize={25} />
@@ -166,7 +166,7 @@ const NavBar = ({ user, setsearchTerm, searchTerm }) => {
           >
             <IoAdd
               fontSize={25}
-              color={`${colorMode == "dark" ? "#111" : "#f1f1f1"}`}
+              color={`${colorMode === "dark" ? "#111" : "#f1f1f1"}`}
             />
           </Flex>
         </Link>

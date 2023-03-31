@@ -1,5 +1,5 @@
 // prettier-ignore
-import { Box, Button, Flex, FormLabel, Input, InputGroup, InputLeftElement, Menu, MenuButton, MenuItem, MenuList, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import {  Button, Flex, FormLabel, Input, InputGroup, InputLeftElement, Menu, MenuButton, MenuItem, MenuList, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import React, { useEffect, useRef, useState } from "react";
 import {
   IoCheckmark,
@@ -20,11 +20,11 @@ import { Editor } from "@tinymce/tinymce-react/lib/cjs/main/ts/components/Editor
 import { fetchUser } from "../utils/fetchUser";
 import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
-import { getAdditionalUserInfo } from "firebase/auth";
+// import { getAdditionalUserInfo } from "firebase/auth";
 
 const Create = () => {
   const { colorMode } = useColorMode();
-  const bg = useColorModeValue("gray.50", "gray.900");
+  // const bg = useColorModeValue("gray.50", "gray.900");
   const textColor = useColorModeValue("gray.900", "gray.50");
 
   const editorRef = useRef(null);
@@ -217,7 +217,7 @@ const Create = () => {
               children={
                 <IoLocation
                   fontSize={20}
-                  color={`${colorMode == "dark" ? "#f1f1f1" : "#111"}`}
+                  color={`${colorMode === "dark" ? "#f1f1f1" : "#111"}`}
                 />
               }
             />
@@ -270,7 +270,7 @@ const Create = () => {
                     <>
                       <IoCloudUpload
                         fontSize={30}
-                        color={`${colorMode == "dark" ? "#f1f1f1" : "#111"}`}
+                        color={`${colorMode === "dark" ? "#f1f1f1" : "#111"}`}
                       />
                       <Text mt={5} fontSize={20} color={textColor}>
                         Click to upload

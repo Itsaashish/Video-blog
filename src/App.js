@@ -16,7 +16,7 @@ const App = () => {
       const [userInfo] = fetchUser();
       setUser(userInfo);
     }
-  }, []);
+  }, [navigate]);
 
   return (
     <Routes>

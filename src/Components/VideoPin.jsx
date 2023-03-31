@@ -2,7 +2,7 @@ import {
   Flex,
   Image,
   Text,
-  useColorMode,
+  // useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
@@ -16,7 +16,7 @@ const avatar =
   "https://ak.picdn.net/contributors/3038285/avatars/thumb.jpg?t=164360626";
 
 const VideoPin = ({ data }) => {
-  const { colorMode } = useColorMode();
+  // const { colorMode } = useColorMode();
   const firestoreDb = getFirestore(firebaseApp);
 
   const bg = useColorModeValue("blackAlpha.700", "gray.900");
@@ -31,7 +31,7 @@ const VideoPin = ({ data }) => {
       gertUserInfo(firestoreDb, userId).then((data) => {
         setUserInfo(data);
       });
-  }, [userId]);
+  }, [userId,firestoreDb]);
 
   return (
     <Flex
